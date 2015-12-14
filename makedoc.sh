@@ -6,7 +6,7 @@
 # (c) Del 2015 http://www.babel.com.au/
 #
 
-APPNAME='Incube8 Debug and Logging API Documentation'
+APPNAME='Applog Debug and Logging API Documentation'
 CMDFILE=apigen.cmd.$$
 DESTDIR=./documents
 SRCDIRS="src"
