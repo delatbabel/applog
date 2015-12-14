@@ -2,7 +2,12 @@
 
 Application and Audit Log package for Laravel 5.
 
-## Debug and Logging
+This builds on some code that I've had hanging around for some time.  It provides a database
+backed log for Laravel, into which debug, info and error logs can be written.  It also provides
+an audit logging trait which can be attached to any model to automatically log CREATE and UPDATE
+records for that model.
+
+## Features
 
 This package extends the existing Laravel 5 log writer with the following features:
 
