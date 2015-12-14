@@ -1,0 +1,6 @@
+.directory
+.idea/
+vendor/
+dirlist.app
+dirlist.cache
+dirlist.vendor

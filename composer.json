@@ -1,0 +1,22 @@
+{
+    "name": "delatbabel/applog",
+    "description": "Laravel applicaton and audit logging package.",
+    "keywords": ["laravel", "debug", "log", "audit"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Del",
+            "email": "del@babel.com.au"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "laravel/framework": "5.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Delatbabel\\Applog\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
