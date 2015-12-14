@@ -20,25 +20,27 @@ use Delatbabel\Applog\Log\Writer;
  * You will need to make the following changes:
  *
  * * Modify each of app/Console/Kernel.php and app/Http/Kernel.php to include
- *   the following bootstrappers array:
+ *   the following bootstrappers function:
  *
  * <code>
- *   protected $bootstrappers = [
- *       'Illuminate\Foundation\Bootstrap\DetectEnvironment',
- *       'Illuminate\Foundation\Bootstrap\LoadConfiguration',
- *       'Delatbabel\Applog\Bootstrap\ConfigureLogging',
- *       'Illuminate\Foundation\Bootstrap\HandleExceptions',
- *       'Illuminate\Foundation\Bootstrap\RegisterFacades',
- *       'Illuminate\Foundation\Bootstrap\RegisterProviders',
- *       'Illuminate\Foundation\Bootstrap\BootProviders',
- *   ];
+ * protected function bootstrappers()
+ * {
+ *     $bootstrappers = parent::bootstrappers();
+ *     // Swap out the default Laravel ConfigureLogging class with our own.
+ *     foreach ($bootstrappers as $key => $value) {
+ *         if ($value == 'Illuminate\Foundation\Bootstrap\ConfigureLogging') {
+ *             $bootstrappers[$key] = 'Delatbabel\Applog\Bootstrap\ConfigureLogging';
+ *         }
+ *     }
+ *     return $bootstrappers;
+ * }
  * </code>
  *
  * Note that Delatbabel\Applog\Bootstrap\ConfigureLogging replaces the original
  * line Illuminate\Foundation\Bootstrap\ConfigureLogging.  You may of course
- * already have a bootstrappers array in your Kernel.php files with other
+ * already have a bootstrappers function in your Kernel.php files with other
  * bootstrappers replaced, in which case you just need to modify it to include
- * the updated ConfigureLogging bootstrapper.
+ * the updated ConfigureLogging bootstrapper code.
  */
 class ConfigureLogging extends BaseConfigureLogging
 {
