@@ -49,7 +49,7 @@ class ApplogHelper
     {
         // Get the list of client IP addresses by first setting the
         // list of trusted proxies.
-        // Request::setTrustedProxies(['10.20.0.37']);
+        // Request::setTrustedProxies(['reverse.proxies.go.here']);
         $clientIps = Request::getClientIps();
         $clientIp = implode(', ', $clientIps);
 

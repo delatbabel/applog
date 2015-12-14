@@ -102,21 +102,25 @@ class DebugServiceProvider extends ServiceProvider
             }
 
             // Store the log entry.
-            Applog::create([
-                'type'          => $level,
-                // 'model'          => get_class($target),
-                // 'foreign_id' => $target->id,
-                'classname'     => $classname,
-                'traitname'     => $traitname,
-                'filename'      => $filename,
-                'linenumber'    => $linenumber,
-                'functionname'  => $functionname,
-                'message'       => $message,
-                'details'       => json_encode($context),
-                'ipaddr'        => $clientIp,
-                'created_by'    => $username,
-                'updated_by'    => $username,
-            ]);
+            try {
+                Applog::create([
+                    'type'          => $level,
+                    // 'model'          => get_class($target),
+                    // 'foreign_id' => $target->id,
+                    'classname'     => $classname,
+                    'traitname'     => $traitname,
+                    'filename'      => $filename,
+                    'linenumber'    => $linenumber,
+                    'functionname'  => $functionname,
+                    'message'       => $message,
+                    'details'       => json_encode($context),
+                    'ipaddr'        => $clientIp,
+                    'created_by'    => $username,
+                    'updated_by'    => $username,
+                ]);
+            } catch (\Exception $e) {
+                // Do nothing
+            }
         });
     }
 
