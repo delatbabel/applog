@@ -3,8 +3,6 @@
  * Applog model
  *
  * @author     Del
- * @copyright  2014 Incube8.sg
- * @version    1.0
  */
 
 namespace Delatbabel\Applog\Models;

@@ -3,8 +3,6 @@
  * Applog Helper
  *
  * @author     Del
- * @copyright  2015 Incube8.sg
- * @version    1.0
  */
 
 namespace Delatbabel\Applog\Helpers;

@@ -3,7 +3,6 @@
  * Auditable Trait -- for model classes that can be audited.
  *
  * @author Del
- * @copyright  2015 Incube8.sg
  */
 
 namespace Delatbabel\Applog\Models;
