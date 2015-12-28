@@ -240,3 +240,9 @@ eventAuditLogger() does the actual work of audit logging -- writing an entry to 
 Note that I have chosen to use a DB::table()->insert() call to write the data instead of creating
 an Applog model and saving it, *just in case* someone accidentally ties the Auditable trait to
 the Applog model (which would create an infinite loop).
+
+In doing this I have effectively created a new log level, called "audit".
+
+Again, in the ideal world, each audit event would simply fire a call to the Monolog framework and
+there could be a Monolog compatible writer instance attached to the framework to listen to and
+record all of the audit events and log them, but that's not how Laravel is currently built.
