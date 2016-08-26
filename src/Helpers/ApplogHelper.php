@@ -49,7 +49,7 @@ class ApplogHelper
         // list of trusted proxies.
         // Request::setTrustedProxies(['reverse.proxies.go.here']);
         $clientIps = Request::getClientIps();
-        $clientIp = implode(', ', $clientIps);
+        $clientIp  = implode(', ', $clientIps);
 
         // Also get any addresses in _SERVER["HTTP_X_FORWARDED_FOR"]
         $forwardAddress = isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : '';

@@ -50,7 +50,7 @@ class Applog extends Model
             list($classname, $traitname, $filename, $linenumber, $functionname, $message) = $logdata;
         } else {
             list($classname, $traitname, $filename, $linenumber, $functionname, $message) =
-                array('', '', '', '', '', $message);
+                ['', '', '', '', '', $message];
         }
 
         // Store the log entry.

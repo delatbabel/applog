@@ -6,10 +6,10 @@
  */
 namespace Delatbabel\Applog\Bootstrap;
 
-use Illuminate\Foundation\Bootstrap\ConfigureLogging as BaseConfigureLogging;
-use Illuminate\Contracts\Foundation\Application;
-use Monolog\Logger as Monolog;
 use Delatbabel\Applog\Log\Writer;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Foundation\Bootstrap\ConfigureLogging as BaseConfigureLogging;
+use Monolog\Logger as Monolog;
 
 /**
  * Configure Logging Class
