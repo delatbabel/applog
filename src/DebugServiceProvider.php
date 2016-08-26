@@ -5,11 +5,11 @@
 
 namespace Delatbabel\Applog;
 
-use Delatbabel\Applog\Models\Applog;
 use Delatbabel\Applog\Helpers\ApplogHelper;
+use Delatbabel\Applog\Models\Applog;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\ServiceProvider;
 
 /**
  * Debug Service Provider
@@ -101,7 +101,7 @@ class DebugServiceProvider extends ServiceProvider
                 list($classname, $traitname, $filename, $linenumber, $functionname, $message) = $logdata;
             } else {
                 list($classname, $traitname, $filename, $linenumber, $functionname, $message) =
-                    array('', '', '', '', '', $message);
+                    ['', '', '', '', '', $message];
             }
 
             // Store the log entry.

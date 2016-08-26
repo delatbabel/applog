@@ -90,7 +90,7 @@ trait Auditable
 
         // Store the audit log.
         try {
-            DB::table('applogs')->insert(array(
+            DB::table('applogs')->insert([
                 'type'          => 'audit',
                 'model'         => get_class($target),
                 'foreign_id'    => $target->id,
@@ -106,7 +106,7 @@ trait Auditable
                 'updated_by'    => $username,
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s'),
-            ));
+            ]);
         } catch (\Exception $e) {
             // Do nothing
         }

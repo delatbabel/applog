@@ -23,7 +23,7 @@ class Writer extends BaseWriter
      * @param  array  $context
      * @return void
      */
-    public function debug($message, array $context = array())
+    public function debug($message, array $context = [])
     {
         // Throw out debug messages if we are not in debug mode
         if (\Config::get('app.debug') != true) {
