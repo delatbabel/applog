@@ -41,6 +41,12 @@ Once that is done, run the composer update command:
     composer update
 ```
 
+Alternatively just run this command:
+
+```
+    composer require delatbabel/applog
+```
+
 ### Register Service Provider
 
 After composer update completes, add this line to your config/app.php file in the 'providers' array:
@@ -79,9 +85,9 @@ the updated ConfigureLogging bootstrapper code.
 
 Finally, incorporate and run the migration scripts to create the database tables as follows:
 
-```php
-php artisan vendor:publish --tag=migrations --force
-php artisan migrate
+```
+    php artisan vendor:publish --tag=migrations --force
+    php artisan migrate
 ```
 
 ## Example
@@ -167,7 +173,7 @@ coding.
 ## Bootstrapping
 
 Laravel includes a class called Illuminate\Foundation\Http\Kernel which handles bootstrapping
-the application in Http mode, and a similar class for bootstraping in Console mode.  These two
+the application in Http mode, and a similar class for bootstrapping in Console mode.  These two
 classes are normally extended in an application in the App\Http\Kernel and App\Console\Kernel
 classes respectively.
 
