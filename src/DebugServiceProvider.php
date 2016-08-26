@@ -78,6 +78,9 @@ class DebugServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../database/migrations' => $this->app->databasePath() . '/migrations'
         ], 'migrations');
+        $this->publishes([
+            __DIR__ . '/../config' => config_path()
+        ], 'config');
 
         // Log needs a closure as a listener
         Log::listen(function ($level, $message, $context) {
