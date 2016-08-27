@@ -1,5 +1,9 @@
 # applog
 
+[![StyleCI](https://styleci.io/repos/47952646/shield)](https://styleci.io/repos/47952646)
+[![Latest Stable Version](https://poser.pugx.org/delatbabel/applog/version.png)](https://packagist.org/packages/ddpro/applog)
+[![Total Downloads](https://poser.pugx.org/delatbabel/applog/d/total.png)](https://packagist.org/packages/delatbabel/applog)
+
 Application and Audit Log package for Laravel 5.
 
 This builds on some code that I've had hanging around for some time.  It provides a database
