@@ -69,7 +69,7 @@ return [
             'type'     => 'text',
             'editable' => false,
         ],
-        'model' => [
+        'modelname' => [
             'title'    => 'Model Name',
             'type'     => 'text',
             'editable' => false,
@@ -77,11 +77,6 @@ return [
         'foreign_id' => [
             'title'    => 'Model ID',
             'type'     => 'number',
-            'editable' => false,
-        ],
-        'name' => [
-            'title'    => 'Name',
-            'type'     => 'text',
             'editable' => false,
         ],
         'classname' => [

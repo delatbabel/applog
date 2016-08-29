@@ -16,9 +16,8 @@ class CreateApplogsTable extends Migration
         Schema::create('applogs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('type', 50)->nullable();
-            $table->string('model', 50)->nullable();
+            $table->string('modelname', 50)->nullable();
             $table->integer('foreign_id')->nullable();
-            $table->string('name', 255)->nullable();
             $table->string('classname', 255)->nullable();
             $table->string('traitname', 255)->nullable();
             $table->string('functionname', 255)->nullable();

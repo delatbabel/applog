@@ -92,7 +92,7 @@ trait Auditable
         try {
             DB::table('applogs')->insert([
                 'type'          => 'audit',
-                'model'         => get_class($target),
+                'modelname'     => get_class($target),
                 'foreign_id'    => $target->id,
                 'classname'     => __CLASS__,
                 'traitname'     => __TRAIT__,

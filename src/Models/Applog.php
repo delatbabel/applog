@@ -18,7 +18,7 @@ class Applog extends Model
 {
     // DO NOT use AuditableTrait or you will cause an endless loop and fill the database!
 
-    public $fillable = ['type', 'model', 'foreign_id', 'classname', 'traitname', 'functionname',
+    public $fillable = ['type', 'modelname', 'foreign_id', 'classname', 'traitname', 'functionname',
         'filename', 'linenumber', 'message', 'details', 'ipaddr', 'created_by', 'updated_by'];
 
     /**
@@ -57,8 +57,8 @@ class Applog extends Model
         try {
             $error = static::create([
                 'type'          => $level,
-                // 'model'          => get_class($target),
-                // 'foreign_id' => $target->id,
+                // 'modelname'    => get_class($target),
+                // 'foreign_id'   => $target->id,
                 'classname'     => $classname,
                 'traitname'     => $traitname,
                 'filename'      => $filename,

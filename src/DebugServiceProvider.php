@@ -108,7 +108,7 @@ class DebugServiceProvider extends ServiceProvider
             try {
                 Applog::create([
                     'type'          => $level,
-                    // 'model'          => get_class($target),
+                    // 'modelname'  => get_class($target),
                     // 'foreign_id' => $target->id,
                     'classname'     => $classname,
                     'traitname'     => $traitname,
