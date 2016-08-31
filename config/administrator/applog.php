@@ -14,6 +14,8 @@ return [
 
     'model' => '\Delatbabel\Applog\Models\Applog',
 
+    'server_side' => true,
+
     /**
      * The display columns
      */
