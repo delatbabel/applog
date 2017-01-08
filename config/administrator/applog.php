@@ -19,12 +19,14 @@ return [
     /**
      * The display columns
      */
-    'columns' => [
-        'id',
-        'type' => [
+    'columns'     => [
+        'id'   => [
+            'title' => 'ID',
+        ],
+        'type'         => [
             'title' => 'Type',
         ],
-        'classname' => [
+        'classname'    => [
             'title'    => 'Class Name',
             'sortable' => false,
         ],
@@ -32,15 +34,15 @@ return [
             'title'    => 'Function Name',
             'sortable' => false,
         ],
-        'linenumber' => [
+        'linenumber'   => [
             'title'    => 'Line Number',
             'sortable' => false,
         ],
-        'message' => [
+        'message'      => [
             'title'    => 'Message',
             'sortable' => false,
         ],
-        'created_at' => [
+        'created_at'   => [
             'title' => 'Date/Time',
         ],
     ],
@@ -48,11 +50,11 @@ return [
     /**
      * The filter set
      */
-    'filters' => [
-        'type' => [
+    'filters'     => [
+        'type'       => [
             'title' => 'Type',
         ],
-        'classname' => [
+        'classname'  => [
             'title'    => 'Class Name',
             'sortable' => false,
         ],
@@ -66,27 +68,27 @@ return [
      * The editable fields
      */
     'edit_fields' => [
-        'type' => [
+        'type'         => [
             'title'    => 'Type',
             'type'     => 'text',
             'editable' => false,
         ],
-        'modelname' => [
+        'modelname'    => [
             'title'    => 'Model Name',
             'type'     => 'text',
             'editable' => false,
         ],
-        'foreign_id' => [
+        'foreign_id'   => [
             'title'    => 'Model ID',
             'type'     => 'number',
             'editable' => false,
         ],
-        'classname' => [
+        'classname'    => [
             'title'    => 'Class Name',
             'type'     => 'text',
             'editable' => false,
         ],
-        'traitname' => [
+        'traitname'    => [
             'title'    => 'Trait Name',
             'type'     => 'text',
             'editable' => false,
@@ -96,37 +98,37 @@ return [
             'type'     => 'text',
             'editable' => false,
         ],
-        'filename' => [
+        'filename'     => [
             'title'    => 'File Name',
             'type'     => 'text',
             'editable' => false,
         ],
-        'linenumber' => [
+        'linenumber'   => [
             'title'    => 'Line Number',
             'type'     => 'text',
             'editable' => false,
         ],
-        'ipaddr' => [
+        'ipaddr'       => [
             'title'    => 'IP Address',
             'type'     => 'text',
             'editable' => false,
         ],
-        'message' => [
+        'message'      => [
             'title'    => 'Message',
             'type'     => 'text',
             'editable' => false,
         ],
-        'details' => [
+        'details'      => [
             'title'    => 'Message',
             'type'     => 'textarea',
             'editable' => false,
         ],
-        'created_by' => [
+        'created_by'   => [
             'title'    => 'User Name',
             'type'     => 'text',
             'editable' => false,
         ],
-        'created_at' => [
+        'created_at'   => [
             'title'    => 'Date/Time',
             'type'     => 'datetime',
             'editable' => false,
