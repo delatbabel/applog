@@ -136,15 +136,9 @@ return [
     ],
 
     'action_permissions' => [
-        'create' => function ($model) {
-            return false;
-        },
-        'update' => function ($model) {
-            return false;
-        },
-        'delete' => function ($model) {
-            return false;
-        },
+        'create' => '\Delatbabel\Applog\Helpers\ApplogHelper::detectCreatePermission',
+        'update' => '\Delatbabel\Applog\Helpers\ApplogHelper::detectUpdatePermission',
+        'delete' => '\Delatbabel\Applog\Helpers\ApplogHelper::detectDeletePermission',
     ],
 
     'form_width' => 400,
