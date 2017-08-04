@@ -61,4 +61,16 @@ class ApplogHelper
 
         return $clientIp;
     }
+
+    public static function detectCreatePermission($model) {
+        return true;
+    }
+
+    public static function detectUpdatePermission($model) {
+        return true;
+    }
+
+    public static function detectDeletePermission($model) {
+        return true;
+    }
 }
